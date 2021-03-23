@@ -1,0 +1,6 @@
+name = "roll"
+type = "javascript"
+account_id = "566ccbfc5b9008e65ab6490435cda9a3"
+workers_dev = true
+route = ""
+zone_id = ""
