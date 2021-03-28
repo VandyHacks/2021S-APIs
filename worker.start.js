@@ -7,7 +7,7 @@ async function handleRequest(request) {
   /**
    * URL: https://us-central1-remixapp-main.cloudfunctions.net/discordverify
    * method: POST
-   * Pass in data as JSON string, with these parameters:
+   * body: JSON string with these parameters:
    * - PUBLIC_KEY: your public key from your Discord application settings
    * - signature: request.headers.get('X-Signature-Ed25519')
    * - body: request.headers.get('X-Signature-Timestamp') + (await request.clone().text())
