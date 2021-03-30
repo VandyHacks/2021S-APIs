@@ -36,7 +36,7 @@ async function handleRequest(request) {
   // Get sides and validate input
   const sides = data.data.options[0].value;
   /**
-   * Validation:
+   * Validation (not absolutely required for your API to function):
    * - Is the number of sides an integer?
    * - Is the integer 1 or above?
    * 
