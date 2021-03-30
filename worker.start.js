@@ -12,7 +12,7 @@ async function handleRequest(request) {
    * - signature: request.headers.get('X-Signature-Ed25519')
    * - body: request.headers.get('X-Signature-Timestamp') + (await request.clone().text())
    * 
-   * returns: Object that looks like this: 
+   * returns: JSON object that looks like this: 
    * {
    *   verified: true | false
    * }
@@ -24,7 +24,7 @@ async function handleRequest(request) {
   const data = await request.json();
 
   /**
-   * If Discord PING message (data.type == 1), return a Response with an object that looks like this:
+   * If Discord PING message (data.type == 1), return a Response with an JSON string that looks like this:
    * {
    *    type : 1
    * }
@@ -40,7 +40,7 @@ async function handleRequest(request) {
    * - Is the number of sides an integer?
    * - Is the integer 1 or above?
    * 
-   * If validation fails, send a message Response back. Here's what a message object looks like:
+   * If validation fails, send a message Response back. Here's what a message object looks like (JSON string):
    * {
    *    type: 4
    *    data: {
